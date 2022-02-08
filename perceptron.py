@@ -44,6 +44,8 @@ def drawLines():
                 my_canvas.create_line(x0,y0,Ux,Uy,fill="black")
                 my_canvas.create_line(x0,y0,-Ux,-Uy,fill="black")
                 drawTrainingData()
+                root.after(100)
+                my_canvas.update()
               
 
 
