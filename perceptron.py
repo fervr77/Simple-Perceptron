@@ -18,30 +18,24 @@ def drawLines():
                 m = -w1/w2
                 c = bias/w2
     
-                x0 = 0
-                y0 = c
                 x1 = 5
                 y1 = 5*m+c
+                x2 = -5
+                y2 = -5*m+c
     
-                Ux = x1-x0
-                Uy = y1-y0
-    
-                Umagnitude = np.sqrt(Ux*Ux+Uy*Uy)
-    
-                Ux = Ux/Umagnitude
-                Uy = Uy/Umagnitude
-    
-                Ux = 100000*Ux
-                Uy = 100000*Uy
+               
             
-                x0 = (x0*WIDTH/10)+WIDTH/2
-                Ux = (Ux*WIDTH/10)+WIDTH/2
-                y0 = (y0*HEIGHT/-10)+HEIGHT/2
-                Uy = (Uy*HEIGHT/-10)+HEIGHT/2
+                
+                x1 = (x1*WIDTH/10)+WIDTH/2
+                x2 = (x2*WIDTH/10)+WIDTH/2
+                y1 = (y1*HEIGHT/-10)+HEIGHT/2
+                y2 = (y2*HEIGHT/-10)+HEIGHT/2
     
                 
-                my_canvas.create_line(x0,y0,Ux,Uy,fill="black")
-                my_canvas.create_line(x0,y0,-Ux,-Uy,fill="black")
+    
+                
+                my_canvas.create_line(x1,y1,x2,y2,fill="black")
+               
                 drawTrainingData()
                 root.after(100)
                 my_canvas.update()
@@ -64,30 +58,25 @@ def randomizeWeights():
     m = -w1/w2
     c = bias/w2
     
-    x0 = 0
-    y0 = c
+   
     x1 = 5
     y1 = 5*m+c
-    
-    Ux = x1-x0
-    Uy = y1-y0
-    
-    Umagnitude = np.sqrt(Ux*Ux+Uy*Uy)
-    
-    Ux = Ux/Umagnitude
-    Uy = Uy/Umagnitude
-    
-    Ux = 10000*Ux
-    Uy = 10000*Uy
+    x2 = -5
+    y2 = -5*m+c
     
     
-    x0 = (x0*WIDTH/10)+WIDTH/2
-    Ux = (Ux*WIDTH/10)+WIDTH/2
-    y0 = (y0*HEIGHT/-10)+HEIGHT/2
-    Uy = (Uy*HEIGHT/-10)+HEIGHT/2
     
-    line1 = my_canvas.create_line(x0,y0,Ux,Uy,fill="black")
-    line2 = my_canvas.create_line(x0,y0,-Ux,-Uy,fill="black")
+   
+    
+    
+   
+    x1 = (x1*WIDTH/10)+WIDTH/2
+    x2 = (x2*WIDTH/10)+WIDTH/2
+    y1 = (y1*HEIGHT/-10)+HEIGHT/2
+    y2 = (y2*HEIGHT/-10)+HEIGHT/2
+    
+    line1 = my_canvas.create_line(x1,y1,x2,y2,fill="black")
+   
     drawTrainingData()
    
   
